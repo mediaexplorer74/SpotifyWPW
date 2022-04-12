@@ -1,0 +1,55 @@
+﻿/*
+	Settings and user info page
+*/
+@import "../Generic";
+
+// User button
+.sessionInfo {
+	display: none;
+
+	&Show & {
+		display: block;
+	}
+	
+	position: absolute;
+	top: $statusBarHeight;
+	right: 0;
+	z-index: 10;
+	border: none;
+	margin-right: 16px;
+	padding-top: 13px;
+
+	.UserWidget {
+		&__link {
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+		}
+
+		&__user-link {
+			margin-left: 0;
+			margin-right: 10px;
+		}
+	}
+}
+
+// Settings page
+.e4f75d40c2b0bf34930d2e9499ed7e0b\.scss {
+	padding: 32px 12px 12px;
+	position: fixed; // Prevent the settings page from scrolling
+
+	// Profile picture and name
+	img {
+		width: 64px;
+		height: 64px;
+	}
+
+		h1 {
+			font-size: 22px;
+		}
+
+		// Controls
+		.button-group {
+			align-self: center;
+		}
+}

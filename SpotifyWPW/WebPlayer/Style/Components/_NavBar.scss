@@ -1,0 +1,64 @@
+﻿/*
+	Navigation bar (main bottom app bar) styling
+*/
+
+.Root__nav-bar {
+	position: -ms-device-fixed;
+	top: auto;
+	bottom: 0;
+	z-index: 100;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	background: black;
+
+    // Remove link for app download
+    .NavBar__download-item {
+        display: none;
+    }
+
+	.navBar {
+		padding: 0;
+		width: 100%;
+
+		// Remove spotify logo and list of recent songs
+		&-header, .Rootlist {
+			display: none;
+		}
+
+		// Navbar items container
+		ul {
+			padding-top: 4px;
+			height: 52px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		// Navbar item
+		&-group {
+			width: 30%;
+		
+			// Remove active item indicator
+			a:after {
+				display: none;
+			}
+
+		}
+		
+		// Position icon label below
+		&-link-text-with-icon-wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+
+		// Show icon label
+		.navbar-link__text {
+			width: auto;
+			height: auto;
+			position: static;
+			margin: 0;
+			font-size: 10px;
+		}
+	}
+}

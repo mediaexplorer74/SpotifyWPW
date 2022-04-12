@@ -1,0 +1,90 @@
+﻿/*
+	Main style for player
+*/
+@import "Generic";
+@import "Components/NavBar";
+@import "Components/NowPlayingBar";
+@import "Components/NowPlayingFullscreen";
+@import "Components/SpotifyConnect";
+@import "Components/Page";
+@import "Components/Dialog";
+@import "Components/SearchPage";
+@import "Components/ArtistPage";
+@import "Components/TrackList";
+@import "Components/UserInfo";
+@import "Components/ContextMenu";
+@import "Components/DarkMode";
+
+html, body {
+	min-width: 0;
+	-ms-overflow-style: none; // Hide scrollbar
+	padding-bottom: 48px;
+}
+
+// Background gradient
+._1YMukI_FrE7QRuUVSvq_Qe {
+	position: -ms-device-fixed;
+}
+
+// Popup notificaion
+.ITVPJxOvtLt7upeE1TV9- {
+	padding-top: $statusBarHeight !important;
+}
+
+// Unsupported browser warning
+._7e92df01ea64ded1bddd2787ed9cdf2c\.scss {
+    display: none;
+}
+
+// Change ad layout
+.Root__ads-container {
+    z-index: 20; // Prevents Three-dot buttons from overlapping the ad banner
+}
+
+.AdsContainer {
+	width: 100%;
+    height: 52px;
+    bottom: 100px;
+	padding: 0;
+    position: -ms-device-fixed; // Prevent rubber scrolling
+
+    &__inner {
+        margin: 0 auto;
+
+        iframe {
+            transform: scale(0.565); // More precise banner width
+			transform-origin: top center;
+        }
+    }
+}
+
+// Disable focus effect
+.actionable:active{
+	transform: none !important;
+}
+
+// Disable hover effect
+.control-button--circled:hover, .control-button--circled:focus {
+	transform: none !important;
+
+	&:after{
+		border-color: hsla(0, 0%, 100%, .6);
+	}
+}
+
+// Green playlist play/pause button
+.btn{
+	font-weight: var(--glue-font-weight-black);
+
+	&.green:focus, &.green:hover{
+		background-color: #1db954 !important;
+	}
+	
+	&:focus, &:hover{
+		transform: none !important;
+	}
+}
+
+.control-button:hover, .control-button:focus {
+	color: #b3b3b3;
+}

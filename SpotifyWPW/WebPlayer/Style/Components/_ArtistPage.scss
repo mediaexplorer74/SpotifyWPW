@@ -1,0 +1,128 @@
+﻿/*
+	Artist page
+*/
+
+@import "../Generic";
+
+.content.artist {
+	.contentSpacing {
+		padding: 0 16px;
+	}
+
+	.monthly-listeners {
+		padding-top: 60px;
+	}
+
+    .artist-header {
+        margin-top: -20px; // Make the top banner fill the Status bar gap
+    }
+
+	// Artist name
+	.artist-header h1 {
+		font-size: 30px !important;
+		line-height: 48px !important;
+	}
+
+	.artist-music{
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	
+	.header-buttons {
+		position: static;
+
+		& > button {
+			position: relative;
+            margin-right: auto;
+		}
+
+		& > button:last-of-type{
+			display: none;
+		}
+
+		// "Three dots" button for context menu
+		.react-contextmenu-wrapper {
+			display: block;
+			position: absolute;
+			right: 3px; // Align the button the same way it's aligned in Tracklist
+			top: 40px;
+
+			button {
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+
+	.ArtistAbout {
+		&__about {
+			padding: 0;
+		}
+
+		&__content {
+			flex-direction: column;
+			margin-top: -20px; // Align the Biography content with other tabs
+		}
+
+		&__insights {
+			margin-top: 16px;
+			padding: 0;
+
+			li {
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	// Make page navigation horizontal and scrollable
+	nav {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 16px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 15px;
+			box-shadow: inset -15px 0px 10px -5px black;
+			z-index: 5;
+		}
+
+		&:before {
+			right: auto;
+			left: 0;
+			box-shadow: inset 15px 0px 10px -5px black;
+		}
+
+		ul {
+			overflow-x: auto;
+			flex-direction: row;
+			
+			li {
+				display: flex;
+				align-items: center;
+				min-height: 48px;
+
+				div a {
+					margin: 0;
+					text-align: center;
+					padding: 8px 16px;
+
+					&:before {
+						top: auto !important;
+						bottom: 0 !important;
+						width: 50% !important;
+						left: 25% !important;
+						height: 2px !important;
+					}
+				}
+			}
+		}
+	}
+}

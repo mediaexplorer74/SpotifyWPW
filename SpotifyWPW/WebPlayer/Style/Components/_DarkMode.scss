@@ -1,0 +1,53 @@
+﻿/**
+	Special style created to save the battery on AMOLED screens.
+	General idea is to fill most of the screen with true black color (#000000)
+*/
+
+.amoledDarkMode {
+	// Main background
+	._1YMukI_FrE7QRuUVSvq_Qe {
+		background: black !important;
+	}
+
+	// Gradient background image
+	._0efd6b9f9de35e4d1fe896fe2ce5c17c\.scss {
+		display: none;
+	}
+
+	// Padded background
+	.Root__main-view .main-view-container {
+		.main-view-container__scroll-node {
+			background: black;
+		}
+	}
+
+    // Remaining background
+    > div {
+        background-color: black;
+    }
+
+	// Now playing bar
+	.Root__now-playing-bar {
+		.now-playing-bar-container{
+			background-color: black;
+		}
+	}
+
+	// Fullscreen now playing view
+	.Root__now-playing-view{
+		.NowPlayingView, .now-playing-bar-container{
+			background: black !important;
+		}
+	}
+
+	// Search input
+	.SearchInputBox{
+		background: black !important;
+		border-bottom: 1px solid #333;
+	}
+
+    // Artist Pages
+    .artist, .artist-music, .artist-singles, .artist-appears-on, .related-artists, .ArtistAbout__container {
+        background-color: black;
+    }
+}
